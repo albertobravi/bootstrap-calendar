@@ -13,13 +13,32 @@
               </h6>
 
               <div class="btn-group" data-toggle="buttons">
+                <!--<% if (event.status == 0 || event.status == 1) { %>
+                  <% _.each(aStatus, function (status, iKey) { %>
+                    <label class="btn btn-primary btn-default <%= radioButtonSize %> glyphicon <%= status['icon'] %> 
+                      <%= (event.status == iKey ? 'active btn-' + status['color'] : '') %>" 
+                      title="<%= status['label'] %>" 
+                      data-event-id="<%= event.id %>" data-event-value="<%= iKey %>">
+                      <input type="radio" name="<%= event.id %>" value="<%= iKey %>" />
+                    </label>
+                  <% }) %>
+                <% } else if (event.status == 2) {%>
+                  <label class="btn btn-primary btn-default <%= radioButtonSize %> glyphicon <%= getStatusData(2, 'icon') %> 
+                    active btn-<%=getStatusData(2, 'color') %>" title="<%= getStatusData(2, 'label') %>" 
+                    data-event-id="<%= event.id %>" data-event-value="<%= getStatusData(2, 'status') %>">
+                    <input type="radio" name="<%= event.id %>" value="<%= getStatusData(2, 'status') %>" />
+                  </label>
+                <% } %>-->
+
+                
+
                 <% _.each(aStatus, function (status, iKey) { %>
                   <label class="btn btn-primary btn-default <%= radioButtonSize %> glyphicon <%= status['icon'] %> 
-                    <%= (event.status == iKey ? 'active btn-' + status['color'] : '') %>"
+                    <%= (event.status == iKey ? 'active btn-' + status['color'] : '') %>" 
                     title="<%= status['label'] %>" 
                     data-event-id="<%= event.id %>" data-event-value="<%= iKey %>">
                     <input type="radio" name="<%= event.id %>" value="<%= iKey %>" />
-                  </label> 
+                  </label>
                 <% }) %>
               </div>
             </li>
