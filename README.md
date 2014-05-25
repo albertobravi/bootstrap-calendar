@@ -22,7 +22,7 @@ CREATE TABLE `booking` (
   `name` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `abstract` text,
-  `status` int(1) NOT NULL COMMENT '0=unavailable, 1=available',
+  `status` int(1) NOT NULL COMMENT '0=unavailable, 1=available, 2=extra',
   `started_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `finish_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
