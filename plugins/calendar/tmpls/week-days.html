@@ -1,0 +1,61 @@
+<div class="cal-row-fluid">
+  <% for(var i=0;i<=6;i++) { %>
+    <div class="cal-cell1">
+      <ul class="week-day list-group">
+        <% _.each(events, function(event){ %>
+          <% if(event.start_day == i) { %>
+            <li class="list-group-item text-center">
+              <h6 class="list-group-item-heading">
+                <a class="cal-event-week event<%= event.id %>" href="javascript:void(0)" data-event-id="<%= event.id %>">
+                  <%= event.start_hour_custom %> - <%= event.end_hour_custom %>
+                </a>
+                <span data-toggle="tooltip" data-original-title="<%= event.abstract %>" class="label label-default">Desc</span>
+              </h6>
+
+              <div class="btn-group" data-toggle="buttons">
+                <% _.each(aStatus, function (status, iKey) { %>
+                  <label class="btn btn-primary btn-default <%= radioButtonSize %> glyphicon <%= status['icon'] %> 
+                    <%= (event.status == iKey ? 'active btn-' + status['color'] : '') %>"
+                    title="<%= status['label'] %>" 
+                    data-event-id="<%= event.id %>" data-event-value="<%= iKey %>">
+                    <input type="radio" name="<%= event.id %>" value="<%= iKey %>" />
+                  </label> 
+                <% }) %>
+              </div>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
+  <%}%>
+</div>
+
+<script type="text/javascript">
+  $('span .label-default').tooltip({placement: 'right'});
+  
+  $('.btn').button().on('click', function () {
+    var button = $(this);
+    var buttonId = $(this).data('event-id');
+    var buttonValue = $(this).data('event-value');
+
+    $.getJSON('events.json.php', {
+      action: 'savePreference', 
+      id: buttonId,
+      status: buttonValue
+    }).complete(function(response) {
+      if (response && response['responseJSON'] && response['responseJSON']['success'] && response['responseJSON']['success'] === true) {
+        // clear classes
+        _.each(aStatus, function (status) {
+          button.parent().find('.btn').removeClass('btn-' + status['color']);
+        })
+
+        // set class
+        button.addClass('btn-' + getStatusData(buttonValue, 'color'));
+      }
+
+      if (!response || !response['responseJSON'] || !response['responseJSON']['success'] || response['responseJSON']['success'] !== true) {
+        console.log('errore inatteso');
+      }
+    });
+  });
+</script>
