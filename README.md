@@ -5,7 +5,7 @@ Another Bootstrap 3 Calendar
 
 A Full view calendar based on Twitter Bootstrap. Please try the [demo](http://www.albertobravi.com/demo-bootstrap-calendar/).
 
-![Bootstrap full calendar](http://www.albertobravi.com/demo-bootstrap-calendar/demo.png)
+![Bootstrap full calendar](http://www.albertobravi.com/demo-bootstrap-calendar/demo.png?v1.1)
 
 ##Quick Start
  - Create a database
@@ -43,8 +43,6 @@ CREATE TABLE `booking` (
 
 #####invoke via Web
     /setupDatabase.php
-
-
 
 ###License
 
