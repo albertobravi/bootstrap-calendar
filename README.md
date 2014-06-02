@@ -5,7 +5,7 @@ Another Bootstrap 3 Calendar
 
 A Full view calendar based on Twitter Bootstrap. Please try the [demo](http://www.albertobravi.com/demo-bootstrap-calendar/).
 
-![Bootstrap full calendar](http://www.albertobravi.com/demo-bootstrap-calendar/demo.png)
+![Bootstrap full calendar](http://www.albertobravi.com/demo-bootstrap-calendar/demo.png?20140602)
 
 ##Quick Start
  - Create a database
@@ -32,6 +32,7 @@ CREATE TABLE `booking` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ````
+
 
 ###Edit connection Params in this file 
     ./config.php
