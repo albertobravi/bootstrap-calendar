@@ -1,0 +1,26 @@
+<div id="cal-day-box">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= cal.locale.time %></th>
+        <th><%= cal.locale.events %></th>
+        <th>Descrizione</th>
+        <th>
+          <% var aLabels = [] %>
+          <% _.each(aStatus, function (status) { aLabels.push(status['label']) }) %>
+          <%= aLabels.join('/') %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% _.each(by_hour, function(event){ %>
+        <tr class="<%= getStatusData(event.status, 'color') %>">
+          <td><span class="cal-hours"><%= event.start_hour_custom %> - <%= event.end_hour_custom %></span></td>
+          <td><%= event.title %></td>
+          <td><%= event.abstract %></td>
+          <td><%= getStatusData(event.status, 'label') %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>

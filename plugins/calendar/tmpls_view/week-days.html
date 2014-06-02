@@ -1,0 +1,29 @@
+<div class="cal-row-fluid">
+  <% for(var i=0;i<=6;i++) { %>
+    <div class="cal-cell1">
+      <ul class="week-day list-group">
+        <% _.each(events, function(event){ %>
+          <% if(event.start_day == i) { %>
+            <li class="list-group-item text-center">
+              <h6 class="list-group-item-heading">
+                <a class="cal-event-week event<%= event.id %>" href="javascript:void(0)" data-event-id="<%= event.id %>">
+                  <%= event.start_hour_custom %> - <%= event.end_hour_custom %>
+                </a>
+                <span data-toggle="tooltip" data-original-title="<%= event.abstract %>" class="label label-default">Desc</span>
+              </h6>
+
+              <div class="btn-group" data-toggle="buttons">
+                <label class="btn btn-primary btn-default <%= radioButtonSize %> glyphicon <%= getStatusData(event.status, 'icon') %> 
+                  <%= 'active btn-' + getStatusData(event.status, 'color') %>" 
+                  title="<%= getStatusData(event.status, 'label') %>" 
+                  data-event-id="<%= event.id %>" data-event-value="<%= event.status %>">
+                  <input type="radio" name="<%= event.id %>" value="<%= event.status %>" />
+                </label>
+              </div>
+            </li>
+          <% } %>
+        <% }) %>
+      </ul>
+    </div>
+  <%}%>
+</div>
