@@ -33,6 +33,7 @@ CREATE TABLE `booking` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ````
 
+
 ###Edit connection Params in this file 
     ./config.php
 
