@@ -3,9 +3,9 @@ bootstrap-week-calendar
 
 Another Bootstrap 3 Calendar
 
-A Full view calendar based on Twitter Bootstrap. Please try the [demo](http://www.albertobravi.com/demo-bootstrap-calendar/).
+A Full view calendar based on Twitter Bootstrap. Please try the [demo](http://droncalonca.albertobravi.com/demo-bootstrap-calendar/).
 
-![Bootstrap full calendar](http://www.albertobravi.com/demo-bootstrap-calendar/demo.png?v1.1)
+![Bootstrap full calendar](http://droncalonca.albertobravi.com/demo-bootstrap-calendar/demo.png)
 
 ##Quick Start
  - Create a database
