@@ -5,8 +5,6 @@ Another Bootstrap 3 Calendar
 
 A Full view calendar based on Twitter Bootstrap.
 
-![Bootstrap full calendar](http://droncalonca.albertobravi.com/demo-bootstrap-calendar/demo.png)
-
 ##Quick Start
  - Create a database
  - Edit connection params
