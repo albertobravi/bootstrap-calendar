@@ -5,7 +5,7 @@ Another Bootstrap 3 Calendar
 
 A Full view calendar based on Twitter Bootstrap.
 
-##Quick Start
+## Quick Start
  - Create a database
  - Edit connection params
  - Setup database
@@ -14,7 +14,7 @@ A Full view calendar based on Twitter Bootstrap.
 ----------
 
 
-###Create a database:
+### Create a database:
 
 ````sql
 CREATE TABLE `booking` (
@@ -32,16 +32,16 @@ CREATE TABLE `booking` (
 ````
 
 
-###Edit connection Params in this file 
+### Edit connection Params in this file 
     ./config.php
 
-###For setup database:
-#####edit params in this file. It's very important for customize you database. (require php knowledge):
+### For setup database:
+##### edit params in this file. It's very important for customize you database. (require php knowledge):
     ./setupDatabase.php
 
-#####invoke via Web
+##### invoke via Web
     /setupDatabase.php
 
-###License
+### License
 
 [MIT License](LICENSE). © Alberto Bravi (http://twitter.com/albertobravi).
